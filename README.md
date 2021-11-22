@@ -9,7 +9,6 @@ a step by step tutorial explaining this code:
 <br>
 https://youtu.be/Ohj-CqALrwk
 <br>
-<br>
 #### Useful Infromation
 <b>Author:</b> Mariya Sha
 <br>
@@ -19,7 +18,7 @@ https://docs.python.org/3/library/sqlite3.html
 <br>
 <b>IDE:</b> Wayscript X
 <br>
-* please note - it's not yet available for the wide public but you can request an invitation here:
+please note - it's not yet available for the wide public but you can request an invitation here:
 <br>
 https://wayscript.com/wsx
 <br>
