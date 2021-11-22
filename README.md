@@ -1,10 +1,15 @@
 # sqliteBasics
 create a database, insert data and easily select it with Sqlite
 <br>
-watch a step by step tutorial for this code on YouTube:
+<br>
+###### Watch on YouTube
+<br>
+a step by step tutorial explaining this code:
 <br>
 https://youtu.be/Ohj-CqALrwk
 <br>
+<br>
+###### Useful Infromation
 <br>
 <b>Author:</b> Mariya Sha
 <br>
