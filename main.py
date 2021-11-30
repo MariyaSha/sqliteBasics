@@ -1,9 +1,9 @@
 import sqlite3
 
 # create empty database
-connection = sqlite3.connect("gta.db") 
+connection = sqlite3.connect("gta.db")
 # communicate with the database
-cursor = connection.cursor() 
+cursor = connection.cursor()
 
 # data to be inserted into the database
 release_list = [
@@ -14,7 +14,7 @@ release_list = [
     (2004, "Grand Theft Auto: San Andreas", "state of San Andreas"),
     (2008, "Grand Theft Auto IV", "Liberty City"),
     (2013, "Grand Theft Auto V", "Los Santos")
-]    
+]
 
 city_list = [
     ("Liberty City", "New York"),
@@ -28,6 +28,8 @@ city_list = [
 # create database table and populate it with release_list
 cursor.execute("create table gta (release_year integer, release_name text, city text)")
 cursor.executemany("insert into gta values (?,?,?)", release_list)
+# save changes immediatley
+connection.commit()
 
 # print all the rows from the gta table
 for row in cursor.execute("select * from gta"):
@@ -37,11 +39,15 @@ for row in cursor.execute("select * from gta"):
 print("******************************")
 cursor.execute("select * from gta where city=:c", {"c": "Liberty City"})
 gta_search = cursor.fetchall()
-print(gta_search) 
+print(gta_search)
 
-# print specific rows from the cities table
+# create a new cities table
 cursor.execute("create table cities (gta_city text, real_city text)")
 cursor.executemany("insert into cities values (?,?)", city_list)
+# save changes immediatley
+connection.commit()
+
+# select only the rows where gta_city=Liberty City
 cursor.execute("select * from cities where gta_city=:c", {"c": "Liberty City"})
 cities_search = cursor.fetchall()
 print(cities_search)
