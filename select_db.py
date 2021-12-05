@@ -1,5 +1,5 @@
 import sqlite3
-import pandas as pd
+# import pandas as pd
 
 # load gta.db file (make sure you run main.py first to create it)
 connection = sqlite3.connect("gta.db")
